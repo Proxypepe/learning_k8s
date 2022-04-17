@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: static-web
+  namespace: lesson
+  labels:
+    app: python_app
+spec:
+  containers:
+    - name: web
+      image: justhynd/fast_api_expample
+      ports:
+        - name: web
+          containerPort: 80
+          protocol: TCP
