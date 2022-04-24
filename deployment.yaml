@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: declarative-deployment
+  namespace: lesson
+  labels:
+    app: py-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pythonapp
+  template:
+    metadata:
+      labels:
+        app: pythonapp
+    spec:
+      containers:
+      - name: pythonapp
+        image: justhynd/fast_api_expample:latest
+        ports:
+        - containerPort: 8000

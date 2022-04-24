@@ -8,8 +8,8 @@ metadata:
 spec:
   containers:
     - name: web
-      image: justhynd/fast_api_expample
+      image: justhynd/fast_api_expample:latest
       ports:
         - name: web
-          containerPort: 80
+          containerPort: 8000
           protocol: TCP
