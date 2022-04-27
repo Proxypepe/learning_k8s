@@ -1,0 +1,2 @@
+kubectl expose deployment first-deployment --port=80 --type=NodePort
+kubectl expose deployment http --external-ip=10.0.0.10 --port=8000 --target-port=80
